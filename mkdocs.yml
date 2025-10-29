@@ -1,0 +1,93 @@
+site_name: LibriShare - Documentação
+site_url: https://github.com/LibriShare/libri-share/
+site_description: "LibriShare é uma plataforma de gerenciamento e compartilhamento de livros."
+
+repo_url: https://github.com/LibriShare/libri-share/
+repo_name: libri-share
+
+nav:
+  - 'Introdução': index.md
+  - 'Guia de Uso':
+      - 'Primeiros Passos': guia_uso/primeiros_passos.md
+      - 'Sua Biblioteca': guia_uso/biblioteca.md
+      - 'Acompanhando Leituras': guia_uso/leitura.md
+      - 'Empréstimos': guia_uso/emprestimos.md
+      - 'LibriConnect (Social)': guia_uso/social.md
+  - 'Arquitetura':
+      - 'Visão Geral': arquitetura/visao_geral.md
+      - 'Back-end': arquitetura/backend.md
+      - 'Front-end': arquitetura/frontend.md
+  - 'Design e Concepção':
+      - 'Princípios e Requisitos': design/principios.md
+      - 'Protótipos (UI)': design/prototipos.md
+
+theme:
+  name: material
+  language: pt
+
+  logo: assets/images/logo_sem_fundo.png
+  favicon: assets/images/logo_sem_fundo.png
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.footer
+    - navigation.tabs
+    - navigation.expand
+    - navigation.sections
+    - content.code.copy
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo claro
+      primary: teal
+      accent: lime
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo escuro
+      primary: indigo
+      accent: orange
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+
+extra_css:
+  - stylesheets/extra.css
+  
+plugins:
+   - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T02_Radia_Perlman
