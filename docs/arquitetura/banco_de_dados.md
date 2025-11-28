@@ -6,7 +6,7 @@ O banco de dados foi modelado em **PostgreSQL** e o seu esquema é gerenciado vi
 
 O diagrama abaixo apresenta a estrutura das tabelas geradas no banco de dados.
 
-![Modelo Físico](../assets/images/modelo_fisico_db.png)
+![Modelo Físico](../assets/images/modeloFisico.png)
 <font size="3"><p style="text-align: center">Fonte: Gerado via DBeaver (2025)</p></font>
 
 ---
@@ -116,3 +116,6 @@ CREATE TABLE user_history (
 
     CONSTRAINT fk_user_history_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
+
+
+```

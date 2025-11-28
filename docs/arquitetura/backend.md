@@ -6,27 +6,29 @@ O back-end do LibriShare é uma API RESTful construída em Java com o framework 
 
 O diagrama abaixo ilustra as principais entidades do sistema e seus relacionamentos:
 
-![Diagrama de Classes UML do Back-end](../assets/images/DiagramaUML_V1.png)
-
-<font size="3"><p style="text-align: center">Fonte: Autoria própria (2025)</p></font>
+![Diagrama de Classes UML](../assets/images/diagramaUML.svg)
+<font size="3"><p style="text-align: center"><b>Figura 1</b> - Diagrama de Classes de Domínio<br>Fonte: Autoria própria (2025)</p></font>
 
 ### Entidades Principais
 
-* **User:** Representa o usuário da plataforma. Contém informações pessoais (nome, email, hash da senha) e de endereço (para empréstimos). O usuário `cria` Posts e `possui na biblioteca` UserBooks.
-* **Book:** A entidade de livro "global", com dados imutáveis como título, autor, ISBN, etc..
-* **UserBook:** A classe chave que representa "um livro na biblioteca de um usuário específico". É aqui que são armazenados os dados de leitura do usuário, como status (`ReadingStatus`), notas privadas, avaliação e progresso (página atual).
-* **Loan:** Representa um empréstimo. Está associado a um `UserBook` (o que foi emprestado) e a um `User` (quem emprestou). Contém dados como o nome do mutuário e as datas de empréstimo/devolução.
-* **Post / Comment:** Entidades que alimentam o lado social (LibriConnect). Um `User` `cria` um `Post` (que pode ser uma `REVIEW`, `STATUS_UPDATE`, etc.) e outros usuários podem `escrever` `Comments`.
+* **User:** Representa o usuário da plataforma. Contém informações pessoais (nome, email, hash da senha) e preferências (meta de leitura anual). O usuário é o ponto central que possui uma biblioteca (`UserBook`) e gera histórico (`UserHistory`).
+* **Book:** A entidade de livro "global", contendo dados imutáveis da obra como título, autor, ISBN, editora e capa. Serve de referência para evitar duplicação de dados.
+* **UserBook:** A classe associativa que representa "um livro na estante de um usuário". Armazena dados personalizados como status de leitura (`ReadingStatus`), avaliação (estrelas), resenha pessoal e progresso (página atual).
+* **Loan:** Gerencia o empréstimo de livros físicos. Vincula um item da estante (`UserBook`) a um mutuário externo (amigo), controlando datas de saída e previsão de devolução.
+* **UserHistory:** Registra a trilha de auditoria e atividades do usuário, como "Finalizou um livro" ou "Adicionou uma nova obra", permitindo a exibição de uma linha do tempo no perfil.
 
 ---
 
 ## Documentação da API (Swagger)
 
-A API segue a especificação OpenAPI, facilitando a integração com o front-end e testabilidade. Abaixo, a interface do Swagger UI listando os endpoints disponíveis.
+A API segue a especificação OpenAPI, facilitando a integração com o front-end e a testabilidade.
 
-> **[INSIRA AQUI O PRINT DA TELA DO SWAGGER]**
->
-> *Legenda: Visualização dos endpoints e contratos de dados da API.*
+* 🔗 **Acesso Online:** [Swagger UI - LibriShare API (Render)](https://librishare-api.onrender.com/swagger-ui/index.html#/)
+
+Abaixo, a interface visual listando os endpoints disponíveis no ambiente de produção.
+
+![Interface do Swagger](../assets/images/swagger.png)
+<font size="3"><p style="text-align: center"><b>Figura 2</b> - Interface do Swagger UI<br>Fonte: Autoria própria (2025)</p></font>
 
 ---
 
@@ -34,9 +36,8 @@ A API segue a especificação OpenAPI, facilitando a integração com o front-en
 
 Abaixo apresentamos a evidência da execução dos testes automatizados (Unitários e de Integração), garantindo a corretude das regras de negócio descritas acima.
 
-> **[INSIRA AQUI O PRINT DO RESULTADO DOS TESTES (GREEN BAR)]**
->
-> *Legenda: Suíte de testes executada com sucesso via JUnit 5.*
+![Resultado dos Testes](../assets/images/cobertura.png)
+<font size="3"><p style="text-align: center"><b>Figura 3</b> - Suíte de testes (Green Bar)<br>Fonte: Autoria própria (2025)</p></font>
 
 ---
 

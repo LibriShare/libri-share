@@ -63,6 +63,7 @@ librishare/
 │   └── ...
 └── lib/                    # Utilitários e configurações globais
 
+```
 -----
 
 ## 🔌 Integração com o Backend

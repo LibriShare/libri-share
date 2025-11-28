@@ -1,64 +1,73 @@
-# LibriShare
+# 📚 LibriShare
 
-## Sobre o Projeto
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-O LibriShare é uma plataforma de gerenciamento e compartilhamento de livros. O objetivo é permitir que os usuários se conectem, cataloguem suas bibliotecas pessoais e descubram novos livros.
+> **Conectando Leitores, Compartilhando Histórias.**
 
-A plataforma foi projetada para incluir funcionalidades como:
-
-* **Gestão de Biblioteca Pessoal:** Organização de livros em categorias como "Lendo Agora" , "Livros Lidos" e "Lista de Desejos".
-* **Adição de Livros:** Múltiplos métodos para adicionar livros, incluindo busca online, escaneamento de ISBN e cadastro manual.
-* **Gerenciamento de Empréstimos:** Funcionalidade para registrar e controlar empréstimos de livros para amigos ou outros usuários.
-* **Componente Social (LibriConnect):** Uma rede social interna onde os usuários podem ver um feed de atividades, participar de discussões e se conectar com amigos.
-* **Perfis de Usuário:** Páginas de perfil detalhadas com estatísticas de leitura, atividade recente e configurações de privacidade.
-
-## 🛠️ Ferramentas e Tecnologias
-
-O projeto é construído com as seguintes tecnologias:
-
-### Back-end
-* **Java**
-* **Spring Boot:** Utilizado para construir a API RESTful e gerenciar a lógica de negócios, conforme detalhado no diagrama UML do projeto.
-
-### Front-end
-* **v0.dev:** A interface do usuário (UI) foi prototipada e gerada utilizando a tecnologia do v0. Os protótipos podem ser vistos no arquivo `LibriShare.pdf`.
-
-### Banco de Dados
-* **PostgreSQL:** Sistema de gerenciamento de banco de dados relacional escolhido para armazenar os dados da aplicação.
-
-### Infraestrutura e DevOps
-* **Docker:** Utilizado para criar containers para a aplicação e seus serviços (como o banco de dados), facilitando o desenvolvimento e o deploy.
-
-### Documentação
-* **MkDocs:** Gerador de sites de documentação estática.
-* **Material for MkDocs:** Tema utilizado para a documentação.
-
-## 🔗 Links Relevantes
-
-* **[Design Sprint (Miro)](https://miro.com/app/board/uXjVJLIyOmo=/)**: Board do Miro contendo as fases de ideação, benchmarking (Good Reads, Skoob, Libby) e design sprint do projeto.
-* **[Protótipo de Front-end (v0.dev)](https://v0.app/chat/libri-share-platform-design-msPJcnG8O41?b=b_qAcFelQOQEo&f=1)**: Chat de desenvolvimento e prototipação da interface do usuário na plataforma v0.
-* **[Diagrama UML (Back-end)](DiagramaUML_V1.png)**: Diagrama de classes com os métodos do back-end, mostrando entidades como `User`, `Book`, `Loan` e `Post`.
+O **LibriShare** é uma plataforma de gerenciamento e compartilhamento de livros. O objetivo é permitir que usuários se conectem, cataloguem suas bibliotecas pessoais e descubram novas leituras, resgatando o valor do livro físico através da tecnologia.
+👉 **[Acessar Aplicação (Demo)](https://libri-share-front-end.vercel.app/)**
 
 ---
 
-## Equipe
+## 📘 Documentação Completa
+
+A documentação técnica, arquitetural e guias de uso estão disponíveis online:
+
+👉 **[Acesse o Site da Documentação (GitHub Pages)](https://librishare.github.io/libri-share/)**
+
+---
+
+## ✨ Funcionalidades
+
+A plataforma foi projetada para incluir:
+
+* **Gestão de Biblioteca Pessoal:** Organização de livros em categorias como "Lendo Agora", "Livros Lidos" e "Lista de Desejos".
+* **Catálogo Global:** Adição de livros via busca online (Google Books API) ou ISBN.
+* **Gerenciamento de Empréstimos:** Controle total sobre quem está com seus livros e prazos de devolução.
+* **Histórico e Auditoria:** Timeline completa das atividades de leitura do usuário.
+* **Perfis de Usuário:** Estatísticas de leitura, meta anual e personalização de perfil.
+
+## 🛠️ Ferramentas e Tecnologias
+
+### Back-end
+* **Java 17 & Spring Boot 3:** API RESTful robusta, gerenciando a lógica de negócios e segurança.
+* **Flyway:** Versionamento e migração de banco de dados.
+* **Swagger/OpenAPI:** Documentação automática da API.
+
+### Front-end
+* **Next.js 14:** Framework React moderno utilizando App Router.
+* **TypeScript & Tailwind CSS:** Segurança de tipagem e estilização rápida.
+* **v0.dev:** Utilizado para prototipação e geração inicial da interface (UI).
+    * *Ver protótipos em:* [LibriShare.pdf](docs/assets/document/LibriShare.pdf)
+
+### Infraestrutura & Dados
+* **PostgreSQL:** Banco de dados relacional para persistência segura.
+* **Docker:** Containerização da aplicação e banco para fácil desenvolvimento e deploy.
+
+### Documentação
+* **MkDocs & Material for MkDocs:** Gerador de site estático para a documentação do projeto.
+
+## 🔗 Links Relevantes
+
+* **[Design Sprint (Miro)](https://miro.com/app/board/uXjVJLIyOmo=/)**: Board contendo ideação, personas, benchmarking e requisitos.
+* **[Protótipo de Interface (v0.dev)](https://v0.app/chat/libri-share-platform-design-msPJcnG8O41?b=b_qAcFelQOQEo&f=1)**: Chat de desenvolvimento da UI.
+* **[Swagger UI (API em Produção)](https://librishare-api.onrender.com/swagger-ui/index.html#/)**: Teste os endpoints da API em tempo real.
+
+---
+
+## 👩‍💻 Equipe
 
 <div class="team-grid">
   <div class="team-member">
     <a href="https://github.com/BiancaPatrocinio7" target="_blank" rel="noopener">
-      <img src="https://github.com/BiancaPatrocinio7.png" alt="Foto de Bianca Patrocínio Castro">
-      <p>Bianca<br>Patrocínio Castro</p>
+      <img src="https://github.com/BiancaPatrocinio7.png" width="100px" alt="Foto de Bianca Patrocínio Castro" style="border-radius: 50%;">
+      <p><strong>Bianca Patrocínio Castro</strong><br>Desenvolvedora Full Stack</p>
     </a>
   </div>
 </div>
-
----
-
-## Histórico de Versões
-
-| Versão | Data       | Descrição                                           | Autor                                           | Revisor |
-| :----: | ---------- | --------------------------------------------------- | ----------------------------------------------- | ------- |
-|  `1.0` | 28/10/2025 | Criação da estrutura inicial da documentação.       | Bianca Patrocínio                               | Gemini  |
-
 
 ---
