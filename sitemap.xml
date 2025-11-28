@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://github.com/LibriShare/libri-share/</loc>
+         <loc>https://librishare.github.io/libri-share/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/arquitetura/backend/</loc>
+         <loc>https://librishare.github.io/libri-share/arquitetura/backend/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/arquitetura/banco_de_dados/</loc>
+         <loc>https://librishare.github.io/libri-share/arquitetura/banco_de_dados/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/arquitetura/frontend/</loc>
+         <loc>https://librishare.github.io/libri-share/arquitetura/frontend/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/arquitetura/visao_geral/</loc>
+         <loc>https://librishare.github.io/libri-share/arquitetura/visao_geral/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/design/principios/</loc>
+         <loc>https://librishare.github.io/libri-share/design/principios/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/design/prototipos/</loc>
+         <loc>https://librishare.github.io/libri-share/design/prototipos/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/gerenciamento/product_backlog/</loc>
+         <loc>https://librishare.github.io/libri-share/gerenciamento/product_backlog/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/guia_uso/biblioteca/</loc>
+         <loc>https://librishare.github.io/libri-share/guia_uso/biblioteca/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/guia_uso/emprestimos/</loc>
+         <loc>https://librishare.github.io/libri-share/guia_uso/emprestimos/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/guia_uso/leitura/</loc>
+         <loc>https://librishare.github.io/libri-share/guia_uso/leitura/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
     <url>
-         <loc>https://github.com/LibriShare/libri-share/guia_uso/primeiros_passos/</loc>
+         <loc>https://librishare.github.io/libri-share/guia_uso/primeiros_passos/</loc>
          <lastmod>2025-11-28</lastmod>
     </url>
 </urlset>

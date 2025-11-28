@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/LibriShare/libri-share/arquitetura/backend/">
+        <link rel="canonical" href="https://librishare.github.io/libri-share/arquitetura/backend/">
       
       
         <link rel="prev" href="../visao_geral/">
@@ -1192,30 +1192,30 @@
 <p>O back-end do LibriShare é uma API RESTful construída em Java com o framework Spring Boot, conectada a um banco de dados PostgreSQL.</p>
 <h2 id="diagrama-de-classes-uml">Diagrama de Classes (UML)<a class="headerlink" href="#diagrama-de-classes-uml" title="Permanent link">&para;</a></h2>
 <p>O diagrama abaixo ilustra as principais entidades do sistema e seus relacionamentos:</p>
-<p><img alt="Diagrama de Classes UML do Back-end" src="../../assets/images/DiagramaUML_V1.png" /></p>
-<p><font size="3"><p style="text-align: center">Fonte: Autoria própria (2025)</p></font></p>
+<p><img alt="Diagrama de Classes UML" src="../../assets/images/diagramaUML.svg" />
+<font size="3"><p style="text-align: center"><b>Figura 1</b> - Diagrama de Classes de Domínio<br>Fonte: Autoria própria (2025)</p></font></p>
 <h3 id="entidades-principais">Entidades Principais<a class="headerlink" href="#entidades-principais" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>User:</strong> Representa o usuário da plataforma. Contém informações pessoais (nome, email, hash da senha) e de endereço (para empréstimos). O usuário <code>cria</code> Posts e <code>possui na biblioteca</code> UserBooks.</li>
-<li><strong>Book:</strong> A entidade de livro "global", com dados imutáveis como título, autor, ISBN, etc..</li>
-<li><strong>UserBook:</strong> A classe chave que representa "um livro na biblioteca de um usuário específico". É aqui que são armazenados os dados de leitura do usuário, como status (<code>ReadingStatus</code>), notas privadas, avaliação e progresso (página atual).</li>
-<li><strong>Loan:</strong> Representa um empréstimo. Está associado a um <code>UserBook</code> (o que foi emprestado) e a um <code>User</code> (quem emprestou). Contém dados como o nome do mutuário e as datas de empréstimo/devolução.</li>
-<li><strong>Post / Comment:</strong> Entidades que alimentam o lado social (LibriConnect). Um <code>User</code> <code>cria</code> um <code>Post</code> (que pode ser uma <code>REVIEW</code>, <code>STATUS_UPDATE</code>, etc.) e outros usuários podem <code>escrever</code> <code>Comments</code>.</li>
+<li><strong>User:</strong> Representa o usuário da plataforma. Contém informações pessoais (nome, email, hash da senha) e preferências (meta de leitura anual). O usuário é o ponto central que possui uma biblioteca (<code>UserBook</code>) e gera histórico (<code>UserHistory</code>).</li>
+<li><strong>Book:</strong> A entidade de livro "global", contendo dados imutáveis da obra como título, autor, ISBN, editora e capa. Serve de referência para evitar duplicação de dados.</li>
+<li><strong>UserBook:</strong> A classe associativa que representa "um livro na estante de um usuário". Armazena dados personalizados como status de leitura (<code>ReadingStatus</code>), avaliação (estrelas), resenha pessoal e progresso (página atual).</li>
+<li><strong>Loan:</strong> Gerencia o empréstimo de livros físicos. Vincula um item da estante (<code>UserBook</code>) a um mutuário externo (amigo), controlando datas de saída e previsão de devolução.</li>
+<li><strong>UserHistory:</strong> Registra a trilha de auditoria e atividades do usuário, como "Finalizou um livro" ou "Adicionou uma nova obra", permitindo a exibição de uma linha do tempo no perfil.</li>
 </ul>
 <hr />
 <h2 id="documentacao-da-api-swagger">Documentação da API (Swagger)<a class="headerlink" href="#documentacao-da-api-swagger" title="Permanent link">&para;</a></h2>
-<p>A API segue a especificação OpenAPI, facilitando a integração com o front-end e testabilidade. Abaixo, a interface do Swagger UI listando os endpoints disponíveis.</p>
-<blockquote>
-<p><strong>[INSIRA AQUI O PRINT DA TELA DO SWAGGER]</strong></p>
-<p><em>Legenda: Visualização dos endpoints e contratos de dados da API.</em></p>
-</blockquote>
+<p>A API segue a especificação OpenAPI, facilitando a integração com o front-end e a testabilidade.</p>
+<ul>
+<li>🔗 <strong>Acesso Online:</strong> <a href="https://librishare-api.onrender.com/swagger-ui/index.html#/">Swagger UI - LibriShare API (Render)</a></li>
+</ul>
+<p>Abaixo, a interface visual listando os endpoints disponíveis no ambiente de produção.</p>
+<p><img alt="Interface do Swagger" src="../../assets/images/swagger.png" />
+<font size="3"><p style="text-align: center"><b>Figura 2</b> - Interface do Swagger UI<br>Fonte: Autoria própria (2025)</p></font></p>
 <hr />
 <h2 id="qualidade-de-software-e-testes">Qualidade de Software e Testes<a class="headerlink" href="#qualidade-de-software-e-testes" title="Permanent link">&para;</a></h2>
 <p>Abaixo apresentamos a evidência da execução dos testes automatizados (Unitários e de Integração), garantindo a corretude das regras de negócio descritas acima.</p>
-<blockquote>
-<p><strong>[INSIRA AQUI O PRINT DO RESULTADO DOS TESTES (GREEN BAR)]</strong></p>
-<p><em>Legenda: Suíte de testes executada com sucesso via JUnit 5.</em></p>
-</blockquote>
+<p><img alt="Resultado dos Testes" src="../../assets/images/cobertura.png" />
+<font size="3"><p style="text-align: center"><b>Figura 3</b> - Suíte de testes (Green Bar)<br>Fonte: Autoria própria (2025)</p></font></p>
 <hr />
 <h2 id="tecnologias-e-padroes">Tecnologias e Padrões<a class="headerlink" href="#tecnologias-e-padroes" title="Permanent link">&para;</a></h2>
 <ul>

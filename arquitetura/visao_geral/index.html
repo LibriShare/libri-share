@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/LibriShare/libri-share/arquitetura/visao_geral/">
+        <link rel="canonical" href="https://librishare.github.io/libri-share/arquitetura/visao_geral/">
       
       
         <link rel="prev" href="../..">
@@ -1113,39 +1113,9 @@
 <h1 id="visao-geral-da-arquitetura">Visão Geral da Arquitetura<a class="headerlink" href="#visao-geral-da-arquitetura" title="Permanent link">&para;</a></h1>
 <p>O LibriShare segue uma arquitetura cliente-servidor desacoplada (RESTful), composta por um <strong>Frontend SPA</strong> e um <strong>Backend Monolítico Modular</strong>.</p>
 <h2 id="diagrama-de-conteineres-c4-nivel-2">Diagrama de Contêineres (C4 Nível 2)<a class="headerlink" href="#diagrama-de-conteineres-c4-nivel-2" title="Permanent link">&para;</a></h2>
-<p>```mermaid
-graph TD
-    User((Usuário))</p>
-<div class="language-text highlight"><pre><span></span><code>subgraph &quot;Frontend (Vercel)&quot;
-    NextJS[Next.js App\n(React + TypeScript)]
-end
-
-subgraph &quot;Backend (Render)&quot;
-    API[Spring Boot Monolith\n(Java 17)]
-
-    subgraph &quot;Módulos Internos&quot;
-        UserMod[Módulo User]
-        BookMod[Módulo Book]
-        LoanMod[Módulo Loan]
-    end
-end
-
-subgraph &quot;Persistência&quot;
-    DB[(PostgreSQL)]
-end
-
-subgraph &quot;Externo&quot;
-    OpenLib[OpenLibrary API]
-end
-
-User --&gt;|HTTPS| NextJS
-NextJS --&gt;|JSON/REST| API
-API --&gt;|Validação/Lógica| UserMod
-API --&gt;|Validação/Lógica| BookMod
-API --&gt;|Validação/Lógica| LoanMod
-API --&gt;|JDBC| DB
-API --&gt;|Metadata| OpenLib
-</code></pre></div>
+<p>Abaixo apresentamos a visão lógica dos contêineres e suas integrações.</p>
+<p><img alt="Diagrama de Arquitetura C4" src="../../assets/images/arquiteturaFlow.svg" /></p>
+<p><font size="3"><p style="text-align: center">Fonte: Autoria própria (2025)</p></font></p>
 <h2 id="fluxo-de-dados">Fluxo de Dados<a class="headerlink" href="#fluxo-de-dados" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Requisição:</strong> O usuário interage com a interface (Next.js).</li>
@@ -1154,69 +1124,6 @@ API --&gt;|Metadata| OpenLib
 <li><strong>Integração Externa:</strong> Para capas de livros, o sistema consulta a API pública da OpenLibrary.</li>
 <li><strong>Persistência:</strong> Dados críticos (usuários, empréstimos, histórico) são salvos no PostgreSQL.</li>
 </ol>
-<!-- end list -->
-
-<p>````</p>
-<h4 id="docsarquiteturabackendmd"><code>docs/arquitetura/backend.md</code><a class="headerlink" href="#docsarquiteturabackendmd" title="Permanent link">&para;</a></h4>
-<p>```markdown</p>
-<h1 id="arquitetura-do-backend">Arquitetura do Backend<a class="headerlink" href="#arquitetura-do-backend" title="Permanent link">&para;</a></h1>
-<p>O Backend é construído em <strong>Java 17</strong> com <strong>Spring Boot 3</strong>, seguindo os princípios de <em>Clean Architecture</em> simplificada e <em>Domain-Driven Design (DDD)</em> na separação de módulos.</p>
-<h2 id="estrutura-de-pacotes">Estrutura de Pacotes<a class="headerlink" href="#estrutura-de-pacotes" title="Permanent link">&para;</a></h2>
-<p>A aplicação é modularizada por domínio funcional:</p>
-<ul>
-<li><code>modules/user</code>: Autenticação, perfil e gestão de usuários.</li>
-<li><code>modules/book</code>: Catálogo global de livros (metadados).</li>
-<li><code>modules/library</code>: Vínculo entre usuário e livro (status, avaliação).</li>
-<li><code>modules/loan</code>: Lógica de empréstimos e devoluções.</li>
-<li><code>modules/history</code>: Logs de auditoria e linha do tempo.</li>
-</ul>
-<h2 id="modelo-de-dados-er">Modelo de Dados (ER)<a class="headerlink" href="#modelo-de-dados-er" title="Permanent link">&para;</a></h2>
-<p>O banco de dados PostgreSQL é gerenciado via <strong>Flyway</strong>. Abaixo o esquema relacional atual:</p>
-<p>```mermaid
-erDiagram
-    USERS ||--o{ USER_BOOKS : possui
-    BOOKS ||--o{ USER_BOOKS : catalogado_como
-    USER_BOOKS ||--o{ LOANS : empresta
-    USERS ||--o{ HISTORY : gera</p>
-<div class="language-text highlight"><pre><span></span><code>USERS {
-    Long id PK
-    String email
-    String password_hash
-    String first_name
-    Int reading_goal
-}
-
-BOOKS {
-    Long id PK
-    String title
-    String isbn
-    String cover_url
-}
-
-USER_BOOKS {
-    Long id PK
-    Enum status &quot;READ, READING, TO_READ&quot;
-    Int current_page
-    Int rating
-}
-
-LOANS {
-    Long id PK
-    String borrower_name
-    Date due_date
-    Enum status &quot;ACTIVE, RETURNED&quot;
-}
-</code></pre></div>
-<p>````</p>
-<h2 id="seguranca">Segurança<a class="headerlink" href="#seguranca" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Autenticação:</strong> Baseada em ID de sessão (MVP) e preparada para JWT.</li>
-<li><strong>Senhas:</strong> Hash utilizando <code>BCryptPasswordEncoder</code>.</li>
-<li><strong>CORS:</strong> Configurado para aceitar origens específicas (Vercel/Localhost).</li>
-</ul>
-<!-- end list -->
-
-<p>````</p>
 
 
 

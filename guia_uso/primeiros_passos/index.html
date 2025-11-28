@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/LibriShare/libri-share/guia_uso/primeiros_passos/">
+        <link rel="canonical" href="https://librishare.github.io/libri-share/guia_uso/primeiros_passos/">
       
       
         <link rel="prev" href="../../arquitetura/frontend/">
@@ -1141,22 +1141,22 @@
 <ol>
 <li>
 <p><strong>Clone o Repositório:</strong>
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span><span class="o">[</span>https://github.com/LibriShare/libri-share.git<span class="o">](</span>https://github.com/LibriShare/libri-share.git<span class="o">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>libri-share-back-end/backend
-</span></code></pre></div></p>
+    <code>bash
+    git clone [https://github.com/LibriShare/libri-share.git](https://github.com/LibriShare/libri-share.git)
+    cd libri-share-back-end/backend</code></p>
 </li>
 <li>
 <p><strong>Inicie os Serviços:</strong>
     Execute o comando para subir o Banco de Dados e a API:
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
-</span></code></pre></div></p>
+    <code>bash
+    docker-compose up -d</code></p>
 </li>
 <li>
 <p><strong>Inicie o Front-end:</strong>
     Navegue até à pasta do front-end e inicie o servidor:
-    <div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>../../libri-share-front-end/librishare
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>pnpm<span class="w"> </span>install<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pnpm<span class="w"> </span>dev
-</span></code></pre></div>
+    <code>bash
+    cd ../../libri-share-front-end/librishare
+    pnpm install &amp;&amp; pnpm dev</code>
     Acede a <code>http://localhost:3000</code>.</p>
 </li>
 </ol>

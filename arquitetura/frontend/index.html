@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/LibriShare/libri-share/arquitetura/frontend/">
+        <link rel="canonical" href="https://librishare.github.io/libri-share/arquitetura/frontend/">
       
       
         <link rel="prev" href="../banco_de_dados/">
@@ -1279,8 +1279,7 @@
 <hr />
 <h2 id="estrutura-do-projeto">📂 Estrutura do Projeto<a class="headerlink" href="#estrutura-do-projeto" title="Permanent link">&para;</a></h2>
 <p>O código está organizado seguindo as melhores práticas do Next.js App Router:</p>
-<p>```bash
-librishare/
+<pre><code class="language-bash">librishare/
 ├── app/                    # Rotas da aplicação (File-system routing)
 │   ├── layout.tsx          # Layout base (Sidebar, Toaster)
 │   ├── page.tsx            # Landing Page / Login
@@ -1298,7 +1297,9 @@ librishare/
 │   ├── use-user-id.ts      # Gerenciamento seguro do ID do usuário no cliente
 │   ├── use-toast.ts        # Sistema de notificações
 │   └── ...
-└── lib/                    # Utilitários e configurações globais</p>
+└── lib/                    # Utilitários e configurações globais
+
+</code></pre>
 <hr />
 <h2 id="integracao-com-o-backend">🔌 Integração com o Backend<a class="headerlink" href="#integracao-com-o-backend" title="Permanent link">&para;</a></h2>
 <p>A comunicação com a API Spring Boot é feita via <code>fetch</code> nativo do navegador, encapsulado em funções assíncronas dentro dos componentes ou hooks.</p>
