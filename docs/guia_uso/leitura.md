@@ -1,18 +1,21 @@
-# Acompanhamento de Leitura e Avaliações
+# Acompanhamento de Leitura
 
-O LibriShare ajuda os usuários a acompanhar seu progresso de leitura e a registrar suas opiniões.
+O LibriShare ajuda-te a manter o hábito de leitura em dia, registando o teu progresso.
 
-## Lendo Agora
+## Iniciar uma Leitura
+1.  Na tua biblioteca, encontra o livro que queres começar.
+2.  Altera o status para **"Lendo Agora"**.
+3.  O livro aparecerá automaticamente na secção de destaque do teu Dashboard.
 
-A seção "Lendo Agora" foca nos livros que o usuário está lendo ativamente.
+## Atualizar Progresso
+Sempre que leres algumas páginas:
+1.  Acede à página **"Lendo Agora"**.
+2.  Clica em **"Atualizar Progresso"** no cartão do livro.
+3.  Insere a **página atual** em que paraste.
+4.  O sistema calculará a percentagem concluída e quanto falta para o final.
 
-* **Progresso:** Exibe uma barra de progresso (ex: 65%) e o número de páginas lidas (ex: 260 de 400 páginas).
-* **Atualização:** O usuário pode "Atualizar Progresso" de forma rápida (+10, +25 páginas) ou detalhada, ajustando o número exato de páginas e adicionando anotações sobre a sessão de leitura.
-* **Pausar Leitura:** Livros podem ser marcados como "Pausado" (ex: O Pequeno Príncipe).
-
-## Livros Lidos e Avaliações
-
-Após terminar um livro, ele é movido para "Livros Lidos".
-
-* **Histórico:** A tela exibe a coleção de livros concluídos, com data de conclusão, avaliação (estrelas) e um breve resumo ou nota.
-* **Avaliação Detalhada:** Na página de detalhes de um livro lido, o usuário pode ver sua avaliação (ex: 5/5), notas, citações favoritas e tags.
+## Concluir e Avaliar
+Ao chegares à última página:
+1.  O sistema perguntará se desejas marcar como **"Lido"**.
+2.  Podes dar uma nota de **1 a 5 estrelas**.
+3.  Escreve uma **Resenha** pessoal (privada ou pública) para te lembrares do que achaste da obra.

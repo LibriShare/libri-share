@@ -6,20 +6,23 @@ repo_url: https://github.com/LibriShare/libri-share/
 repo_name: libri-share
 
 nav:
-  - 'Introdução': index.md
-  - 'Guia de Uso':
-      - 'Primeiros Passos': guia_uso/primeiros_passos.md
-      - 'Sua Biblioteca': guia_uso/biblioteca.md
-      - 'Acompanhando Leituras': guia_uso/leitura.md
-      - 'Empréstimos': guia_uso/emprestimos.md
-      - 'LibriConnect (Social)': guia_uso/social.md
-  - 'Arquitetura':
-      - 'Visão Geral': arquitetura/visao_geral.md
-      - 'Back-end': arquitetura/backend.md
-      - 'Front-end': arquitetura/frontend.md
-  - 'Design e Concepção':
-      - 'Princípios e Requisitos': design/principios.md
-      - 'Protótipos (UI)': design/prototipos.md
+  - Início: index.md
+  - Arquitetura:
+      - Visão Geral: arquitetura/visao_geral.md
+      - Back-end: arquitetura/backend.md
+      - Banco de Dados: arquitetura/banco_de_dados.md 
+      - Front-end: arquitetura/frontend.md
+  - Guia de Uso:
+      - Primeiros Passos: guia_uso/primeiros_passos.md
+      - Biblioteca: guia_uso/biblioteca.md
+      - Leitura: guia_uso/leitura.md
+      - Empréstimos: guia_uso/emprestimos.md
+      - Social: guia_uso/social.md
+  - Design:
+      - Princípios: design/principios.md
+      - Protótipos: design/prototipos.md
+  - Gerenciamento:
+      - Backlog: gerenciamento/product_backlog.md
 
 theme:
   name: material

@@ -1,18 +1,14 @@
-# Gerenciamento de Empréstimos
+# Gestão de Empréstimos
 
-Uma funcionalidade central do LibriShare é o controle de empréstimos de livros físicos.
+Nunca mais percas um livro emprestado. O sistema de empréstimos permite saber exatamente com quem estão os teus livros.
 
-## Painel de Empréstimos
+## Registar um Novo Empréstimo
+1.  No menu lateral, vai a **"Empréstimos"**.
+2.  Clica no botão **"Novo Empréstimo"**.
+3.  **Seleciona o Livro:** Apenas livros disponíveis na tua estante aparecerão na lista.
+4.  **Dados do Mutuário:** Insere o nome da pessoa que vai levar o livro.
+5.  **Prazo:** Define uma data prevista para devolução.
 
-A tela "Gerenciar Empréstimos" oferece uma visão completa de todos os empréstimos:
-
-* **Visão Geral:** Cards mostram "Empréstimos Ativos", "Atrasados" e "Total de Empréstimos" (histórico).
-* **Listagem:** Uma lista detalhada mostra cada livro emprestado, para quem (ex: Ana Costa), a data do empréstimo e a data de vencimento.
-* **Ações:** Para cada item, é possível "Lembrar" o mutuário ou "Marcar como Devolvido". Livros atrasados são destacados visualmente.
-
-## Novo Empréstimo
-
-O usuário pode registrar um novo empréstimo de duas formas:
-
-1.  **Pela tela do livro:** Clicando em "Emprestar" na página de detalhes do livro.
-2.  **Pela tela de Empréstimos:** Clicando em "+ Novo Empréstimo" e preenchendo um formulário que inclui o livro, nome do emprestário, email, data de devolução e observações.
+## Controlar Devoluções
+* **Empréstimos Ativos:** Vê a lista de todos os livros que estão fora. O sistema destaca a vermelho os que estão atrasados.
+* **Baixa:** Quando o livro for devolvido, clica em **"Marcar como Devolvido"**. O livro voltará a ficar disponível na tua biblioteca.
